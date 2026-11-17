@@ -7,9 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- Подключаем основные стили с главной страницы для шапки и футера -->
+    <!-- Подключаем основные стили (там шапка, футер и адаптив) -->
     <link rel="stylesheet" href="../lab1/style.css"> 
+    <!-- Подключаем стили для этой страницы (сетка, карточки, форма) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -23,7 +24,7 @@
     </header>
 
     <main class="menu-main">
-        <!-- Блок с супами -->
+        <!-- Секция Супы -->
         <section class="menu-section">
             <h2>Супы</h2>
             <div class="dishes-grid">
@@ -32,26 +33,26 @@
                     <p class="dish-price">450 ₽</p>
                     <p class="dish-name">Том Ям с креветками</p>
                     <p class="dish-weight">350 г</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
                 <div class="dish-card">
                     <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?q=80&w=400&auto=format&fit=crop" alt="Борщ">
                     <p class="dish-price">280 ₽</p>
                     <p class="dish-name">Классический борщ с говядиной</p>
                     <p class="dish-weight">300 г</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
                 <div class="dish-card">
                     <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?q=80&w=400&auto=format&fit=crop" alt="Крем-суп">
                     <p class="dish-price">320 ₽</p>
                     <p class="dish-name">Крем-суп из белых грибов</p>
                     <p class="dish-weight">250 г</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
             </div>
         </section>
 
-        <!-- Блок с главными блюдами -->
+        <!-- Секция Главные блюда -->
         <section class="menu-section">
             <h2>Главные блюда</h2>
             <div class="dishes-grid">
@@ -60,26 +61,26 @@
                     <p class="dish-price">390 ₽</p>
                     <p class="dish-name">Паста карбонара</p>
                     <p class="dish-weight">280 г</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
                 <div class="dish-card">
                     <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=400&auto=format&fit=crop" alt="Курица">
                     <p class="dish-price">420 ₽</p>
                     <p class="dish-name">Куриное филе с овощами гриль и соусом песто</p>
                     <p class="dish-weight">310 г</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
                 <div class="dish-card">
                     <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=400&auto=format&fit=crop" alt="Плов">
                     <p class="dish-price">350 ₽</p>
                     <p class="dish-name">Плов с бараниной</p>
                     <p class="dish-weight">350 г</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
             </div>
         </section>
 
-        <!-- Блок с напитками -->
+        <!-- Секция Напитки -->
         <section class="menu-section">
             <h2>Напитки</h2>
             <div class="dishes-grid">
@@ -88,35 +89,32 @@
                     <p class="dish-price">150 ₽</p>
                     <p class="dish-name">Чай черный с чабрецом</p>
                     <p class="dish-weight">400 мл</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
                 <div class="dish-card">
                     <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=400&auto=format&fit=crop" alt="Лимонад">
                     <p class="dish-price">200 ₽</p>
                     <p class="dish-name">Домашний лимонад</p>
                     <p class="dish-weight">500 мл</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
                 <div class="dish-card">
                     <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?q=80&w=400&auto=format&fit=crop" alt="Кофе">
                     <p class="dish-price">180 ₽</p>
                     <p class="dish-name">Капучино</p>
                     <p class="dish-weight">300 мл</p>
-                    <button>Добавить</button>
+                    <button type="button">Добавить</button>
                 </div>
             </div>
         </section>
     </main>
-    <!-- Блок с формой заказа -->
+
+    <!-- Форма заказа (ЛР3) -->
     <section class="order-section">
         <h2>Оформить заказ</h2>
-        
         <form action="https://httpbin.org/post" method="POST" class="order-form">
-            
-            <!-- Блок с заказом -->
             <div class="form-block">
                 <h3>Ваш заказ</h3>
-                
                 <div class="form-group">
                     <label for="soup">Суп:</label>
                     <select id="soup" name="soup" required>
@@ -126,7 +124,6 @@
                         <option value="mushroom_soup">Крем-суп из белых грибов</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="main_dish">Главное блюдо:</label>
                     <select id="main_dish" name="main_dish" required>
@@ -136,7 +133,6 @@
                         <option value="plov">Плов с бараниной</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="drink">Напиток:</label>
                     <select id="drink" name="drink" required>
@@ -146,43 +142,34 @@
                         <option value="cappuccino">Капучино</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="comment">Комментарий:</label>
                     <textarea id="comment" name="comment" rows="3"></textarea>
                 </div>
             </div>
 
-            <!-- Блок с данными клиента -->
             <div class="form-block">
                 <h3>Данные получателя</h3>
-
                 <div class="form-group">
                     <label for="name">Имя:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
                 <div class="form-group checkbox-group">
                     <input type="checkbox" id="subscribe" name="subscribe" checked>
                     <label for="subscribe">Я согласен получать информацию о скидках и акциях</label>
                 </div>
-
                 <div class="form-group">
                     <label for="phone">Телефон:</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
-
                 <div class="form-group">
                     <label for="address">Адрес доставки:</label>
                     <input type="text" id="address" name="address" required>
                 </div>
-
-                <!-- Выбор времени доставки -->
                 <fieldset class="form-group">
                     <legend>Время доставки:</legend>
                     <div class="radio-group">
@@ -194,21 +181,19 @@
                         <label for="exact">К точному времени</label>
                     </div>
                 </fieldset>
-
                 <div class="form-group">
                     <label for="time">Указать время:</label>
                     <input type="time" id="time" name="time" min="07:00" max="23:00" step="300">
                 </div>
             </div>
 
-            <!-- Кнопки -->
             <div class="form-actions">
                 <button type="reset" class="btn-reset">Сбросить</button>
                 <button type="submit" class="btn-submit">Отправить</button>
             </div>
-
         </form>
     </section>
+
     <footer id="contacts">
         <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
         <p>Email: <a href="mailto:order@lunch-delivery.ru">order@lunch-delivery.ru</a></p>
