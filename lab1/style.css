@@ -226,26 +226,38 @@ v {
     align-items: center;
     padding: 10px 0;
 }
+/* ===== Жесткая настройка навигации ===== */
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 15px;
+}    
 /* Обычные ссылки в меню */
 header nav a {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: #ffffff; 
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    margin: 0;
-    padding: 5px 0;
-    border-bottom: 2px solid transparent; /* Резервируем место под полоску */
-    transition: color 0.2s ease, border-bottom 0.2s ease;
+    padding-bottom: 5px; /* Отступ для текста */
+    border-bottom: 2px solid transparent; /* Место под линию */
+    transition: all 0.2s ease;
 }
 
 /* При наведении мышки (hover) */
 header nav a:hover {
-    color: #ffffff !important;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff; /* При наведении появляется белая линия */
 }
+
 
 /* АКТИВНАЯ ссылка (текущая страница) */
 header nav a.active {
-    color: #ffffff !important;
-    border-bottom: 2px solid #ffffff; /* Белая полоска */
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff; /* Постоянная белая линия */
+    font-weight: 800; /* Сделаем шрифт чуть жирнее для выделения */
 }
 }
