@@ -217,7 +217,7 @@ nav a.active {
         font-size: 12px; /* Уменьшаем еще на 2px */
     }
     /* ===== Фикс для навигации ===== */
-header nav {
+v {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -228,12 +228,13 @@ header nav {
 }
 /* Обычные ссылки в меню */
 header nav a {
-    color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый */
+    color: rgba(255, 255, 255, 0.7) !important;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     margin: 0;
-    padding: 5px 10px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent; /* Резервируем место под полоску */
     transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
@@ -245,6 +246,6 @@ header nav a:hover {
 /* АКТИВНАЯ ссылка (текущая страница) */
 header nav a.active {
     color: #ffffff !important;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff; /* Белая полоска */
 }
 }
