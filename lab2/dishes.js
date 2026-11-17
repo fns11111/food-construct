@@ -5,7 +5,7 @@ const dishes = [
     { keyword: "tom_yam", name: "Том Ям с креветками", price: 450, category: "soup", kind: "fish", count: "350 г", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400&auto=format&fit=crop" },
     { keyword: "gaspacho", name: "Гаспачо", price: 250, category: "soup", kind: "veg", count: "300 г", image: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=400&auto=format&fit=crop" },
     { keyword: "ukha", name: "Уха по-фински", price: 350, category: "soup", kind: "fish", count: "350 г", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400&auto=format&fit=crop" },
-    { keyword: "solyanka", name: "Солянка мясная", price: 380, category: "soup", kind: "meat", count: "350 г", image: "https://lifehacker.ru/recipe/sbornaya-myasnaya-solyanka/" },
+    { keyword: "solyanka", name: "Солянка мясная", price: 380, category: "soup", kind: "meat", count: "350 г", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ2rTuVxlqNIH4_GhFdjmxwri8uKhv6tkxEOMO7CKfFdG9mMGG28Pi6BU&s=10" },
 
     // ===== ГЛАВНЫЕ БЛЮДА (6) =====
     { keyword: "carbonara", name: "Паста карбонара", price: 390, category: "main", kind: "meat", count: "280 г", image: "https://images.unsplash.com/photo-1626844131082-256783844137?q=80&w=400&auto=format&fit=crop" },
@@ -19,7 +19,7 @@ const dishes = [
     { keyword: "caesar", name: "Салат Цезарь", price: 320, category: "salad", kind: "meat", count: "200 г", image: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=400&auto=format&fit=crop" },
     { keyword: "greek_salad", name: "Греческий салат", price: 280, category: "salad", kind: "veg", count: "220 г", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=400&auto=format&fit=crop" },
     { keyword: "tuna_salad", name: "Салат с тунцом", price: 350, category: "salad", kind: "fish", count: "180 г", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400&auto=format&fit=crop" },
-    { keyword: "caprese", name: "Капрезе", price: 300, category: "salad", kind: "veg", count: "150 г", image: "https://www.say7.info/cook/recipe/734-Salat-Kapreze.html" },
+    { keyword: "caprese", name: "Капрезе", price: 300, category: "salad", kind: "veg", count: "150 г", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOSx-v_YVJJPOY4v-QQOGCZZ_6XoQ5ehVbEZVzfJ9S5LEca5TqdMRWz_w&s=10" },
     { keyword: "bruschetta", name: "Брускетта с томатами", price: 220, category: "salad", kind: "veg", count: "120 г", image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?q=80&w=400&auto=format&fit=crop" },
     { keyword: "hummus_plate", name: "Хумус с овощами", price: 250, category: "salad", kind: "veg", count: "200 г", image: "https://images.unsplash.com/photo-1577906096429-f73c2c312435?q=80&w=400&auto=format&fit=crop" },
 
