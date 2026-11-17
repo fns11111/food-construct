@@ -152,3 +152,68 @@ footer a {
 footer a:hover {
     color: #ffffff;
 }
+/* --- Глобальные исправления для прижатия футера --- */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto; /* Растягивает main, чтобы футер ушел вниз */
+}
+
+/* --- Меню --- */
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос на новые строки */
+    gap: 15px; /* Отступ между флексами */
+}
+
+/* Активная ссылка */
+nav a.active {
+    color: tomato;
+}
+
+/* --- Адаптивность для главной --- */
+@media (max-width: 800px) {
+    .about-image {
+        width: 500px;
+    }
+    nav {
+        justify-content: space-between; /* Одинаковое расстояние между элементами */
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        text-align: center;
+    }
+    nav {
+        flex-direction: column; /* Вертикальное направление */
+        align-items: center; /* По центру поперечной оси */
+    }
+    nav a {
+        font-size: 20px; /* Увеличиваем шрифт на 4px (было 16px) */
+    }
+    h2 {
+        text-align: center;
+    }
+    .about-image {
+        width: 100%;
+    }
+    table {
+        font-size: 14px; /* Уменьшаем на 2px */
+    }
+}
+
+@media (max-width: 400px) {
+    table {
+        font-size: 12px; /* Уменьшаем еще на 2px */
+    }
+}
