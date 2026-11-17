@@ -248,3 +248,39 @@ header nav a.active {
     border-bottom: 2px solid #ffffff !important;
     font-weight: 800 !important;
 }
+/* ===== Выделение выбранной карточки ===== */
+.dish-card.selected {
+    border: 2px solid tomato !important;
+    background-color: #fff3ed; 
+}
+
+/* ===== Стили для корзины в форме ===== */
+#cart-items {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.cart-empty {
+    color: #888;
+    font-style: italic;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.cart-item span:first-child {
+    font-weight: 600;
+    color: #555;
+}
+
+#cart-total {
+    font-size: 18px;
+    color: #333;
+    text-align: right;
+    margin-bottom: 10px;
+}
