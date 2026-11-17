@@ -21,7 +21,7 @@ const dishes = [
     { keyword: "tuna_salad", name: "Салат с тунцом", price: 350, category: "salad", kind: "fish", count: "180 г", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400&auto=format&fit=crop" },
     { keyword: "caprese", name: "Капрезе", price: 300, category: "salad", kind: "veg", count: "150 г", image: "https://images.unsplash.com/photo-1592415486689-125cbbfc5ef9?q=80&w=400&auto=format&fit=crop" },
     { keyword: "bruschetta", name: "Брускетта с томатами", price: 220, category: "salad", kind: "veg", count: "120 г", image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?q=80&w=400&auto=format&fit=crop" },
-    { keyword: "hummus_plate", name: "Хумус с овощами", price: 250, category: "salad", kind: "veg", count: "200 г", image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?q=80&w=400&auto=format&fit=crop" },
+    { keyword: "hummus_plate", name: "Хумус с овощами", price: 250, category: "salad", kind: "veg", count: "200 г", image: "https://images.unsplash.com/photo-1577906096429-f73c2c312435?q=80&w=400&auto=format&fit=crop" },
 
     // ===== НАПИТКИ (6) =====
     { keyword: "tea", name: "Чай черный с чабрецом", price: 150, category: "drink", kind: "hot", count: "400 мл", image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=400&auto=format&fit=crop" },
