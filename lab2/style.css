@@ -1,3 +1,32 @@
+/* ===== Фикс для навигации (чтобы ссылки не наезжали) ===== */
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px; /* Отступ между ссылками */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0; /* Убираем лишние отступы */
+    padding: 5px 10px;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #333; /* Цвет при наведении */
+}
+
+header nav a.active {
+    color: tomato; /* Активная ссылка */
+    border-bottom: 2px solid tomato; /* Можно добавить подчеркивание для красоты */
+}
 /* ===== Сетка для блюд ===== */
 .menu-main {
     max-width: 1200px;
