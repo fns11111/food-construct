@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч | Food Construct</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем основные стили с главной страницы для шапки и футера -->
+    <link rel="stylesheet" href="../lab1/style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Собрать ланч</h1>
+        <nav>
+            <a href="../lab1/index.html">Главная</a>
+            <a href="lunch.html" class="active">Собрать ланч</a>
+            <a href="../lab1/index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="menu-main">
+        <!-- Блок с супами -->
+        <section class="menu-section">
+            <h2>Супы</h2>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400&auto=format&fit=crop" alt="Том Ям">
+                    <p class="dish-price">450 ₽</p>
+                    <p class="dish-name">Том Ям с креветками</p>
+                    <p class="dish-weight">350 г</p>
+                    <button>Добавить</button>
+                </div>
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?q=80&w=400&auto=format&fit=crop" alt="Борщ">
+                    <p class="dish-price">280 ₽</p>
+                    <p class="dish-name">Классический борщ с говядиной</p>
+                    <p class="dish-weight">300 г</p>
+                    <button>Добавить</button>
+                </div>
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1548943487-a2e4d43b4850?q=80&w=400&auto=format&fit=crop" alt="Крем-суп">
+                    <p class="dish-price">320 ₽</p>
+                    <p class="dish-name">Крем-суп из белых грибов</p>
+                    <p class="dish-weight">250 г</p>
+                    <button>Добавить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок с главными блюдами -->
+        <section class="menu-section">
+            <h2>Главные блюда</h2>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1626844131082-256783844137?q=80&w=400&auto=format&fit=crop" alt="Паста">
+                    <p class="dish-price">390 ₽</p>
+                    <p class="dish-name">Паста карбонара</p>
+                    <p class="dish-weight">280 г</p>
+                    <button>Добавить</button>
+                </div>
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=400&auto=format&fit=crop" alt="Курица">
+                    <p class="dish-price">420 ₽</p>
+                    <p class="dish-name">Куриное филе с овощами гриль и соусом песто</p>
+                    <p class="dish-weight">310 г</p>
+                    <button>Добавить</button>
+                </div>
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=400&auto=format&fit=crop" alt="Плов">
+                    <p class="dish-price">350 ₽</p>
+                    <p class="dish-name">Плов с бараниной</p>
+                    <p class="dish-weight">350 г</p>
+                    <button>Добавить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок с напитками -->
+        <section class="menu-section">
+            <h2>Напитки</h2>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=400&auto=format&fit=crop" alt="Чай">
+                    <p class="dish-price">150 ₽</p>
+                    <p class="dish-name">Чай черный с чабрецом</p>
+                    <p class="dish-weight">400 мл</p>
+                    <button>Добавить</button>
+                </div>
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=400&auto=format&fit=crop" alt="Лимонад">
+                    <p class="dish-price">200 ₽</p>
+                    <p class="dish-name">Домашний лимонад</p>
+                    <p class="dish-weight">500 мл</p>
+                    <button>Добавить</button>
+                </div>
+                <div class="dish-card">
+                    <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?q=80&w=400&auto=format&fit=crop" alt="Кофе">
+                    <p class="dish-price">180 ₽</p>
+                    <p class="dish-name">Капучино</p>
+                    <p class="dish-weight">300 мл</p>
+                    <button>Добавить</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Email: <a href="mailto:order@lunch-delivery.ru">order@lunch-delivery.ru</a></p>
+        <p>Адрес: г. Москва, ул. Пушкина, д. 10</p>
+    </footer>
+
+</body>
+</html>
