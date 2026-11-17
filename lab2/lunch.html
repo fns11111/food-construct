@@ -100,13 +100,22 @@
         <p>Адрес: г. Москва, ул. Пушкина, д. 10</p>
     </footer>
 
-    <script src="dishes.js"></script>
+     <script src="dishes.js"></script>
     <script src="render.js"></script>
     <script src="cart.js"></script>
+    <script src="combo.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             renderDishes();
             updateCartUI();
+            renderCombos(); // Отрисовываем комбо
+        });
+        
+        // Обработчик отправки формы
+        document.querySelector('.order-form').addEventListener('submit', (e) => {
+            if (!validateCombo()) {
+                e.preventDefault(); // Останавливаем отправку, если комбо невалидно
+            }
         });
         
         function resetCart() {
