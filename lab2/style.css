@@ -85,7 +85,7 @@ header nav a.active {
 
 /* Меняем цвет кнопки при наведении на карточку */
 .dish-card:hover button {
-    background-color: tomato;
+    background-color: black;
     color: white;
 }
 
