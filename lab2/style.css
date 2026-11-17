@@ -1,3 +1,16 @@
+/* --- Фикс для меню на странице "Собрать ланч" --- */
+header nav {
+    display: flex;
+    flex-direction: row; /* Возвращаем горизонтальное положение */
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+}
+
+/* Убираем лишние отступы, если они были */
+header nav a {
+    margin-right: 0;
+}
 /* ===== Сетка для блюд ===== */
 .menu-main {
     max-width: 1200px;
