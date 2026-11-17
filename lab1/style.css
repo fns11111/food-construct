@@ -11,6 +11,9 @@ body {
     font-size: 16px;
     color: #333333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Прижимает футер к низу */
 }
 
 /* ===== Шапка ===== */
@@ -28,23 +31,45 @@ header h1 {
     color: #ffffff;
 }
 
-/* ===== Навигация ===== */
-nav {
+/* ===== НАВИГАЦИЯ (ТОЛЬКО ОДИН БЛОК) ===== */
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
     padding: 10px 0;
+    margin-top: 15px;
 }
 
-nav a {
-    font-family: 'Montserrat', sans-serif;
+/* Все ссылки в меню */
+header nav a, 
+header nav a:link, 
+header nav a:visited {
+    color: #ffffff !important;
+    text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 25px;
-    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+    background-color: transparent !important;
+    outline: none !important;
 }
 
-nav a:hover {
-    color: #222222;
+/* При клике и наведении */
+header nav a:hover, 
+header nav a:active, 
+header nav a:focus {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Активная ссылка */
+header nav a.active {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff;
+    font-weight: 800;
 }
 
 /* ===== Основное содержимое ===== */
@@ -52,6 +77,7 @@ main {
     padding: 20px 40px;
     margin: 0 auto;
     max-width: 1100px;
+    flex: 1 0 auto; /* Растягивает main */
 }
 
 section {
@@ -152,41 +178,14 @@ footer a {
 footer a:hover {
     color: #ffffff;
 }
-/* --- Глобальные исправления для прижатия футера --- */
-html, body {
-    height: 100%;
-    margin: 0;
-}
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1 0 auto; /* Растягивает main, чтобы футер ушел вниз */
-}
-
-/* --- Меню --- */
-nav {
-    display: flex;
-    flex-wrap: wrap; /* Разрешаем перенос на новые строки */
-    gap: 15px; /* Отступ между флексами */
-}
-
-/* Активная ссылка */
-nav a.active {
-    color: tomato;
-}
-
-/* --- Адаптивность для главной --- */
+/* ===== Адаптивность ===== */
 @media (max-width: 800px) {
     .about-image {
         width: 500px;
     }
-    nav {
-        justify-content: space-between; /* Одинаковое расстояние между элементами */
+    header nav {
+        justify-content: space-between;
     }
 }
 
@@ -194,71 +193,28 @@ nav a.active {
     header h1 {
         text-align: center;
     }
-    nav {
-        flex-direction: column; /* Вертикальное направление */
-        align-items: center; /* По центру поперечной оси */
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
-    nav a {
-        font-size: 20px; /* Увеличиваем шрифт на 4px (было 16px) */
+    header nav a {
+        font-size: 20px;
     }
     h2 {
         text-align: center;
     }
     .about-image {
         width: 100%;
+        height: auto;
     }
     table {
-        font-size: 14px; /* Уменьшаем на 2px */
+        font-size: 14px;
     }
 }
 
 @media (max-width: 400px) {
     table {
-        font-size: 12px; /* Уменьшаем еще на 2px */
+        font-size: 12px;
     }
-    /* ===== Фикс для навигации ===== */
-v {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px 0;
-}
-/* ===== Финальная навигация ===== */
-header nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 25px;
-    align-items: center;
-    padding: 10px 0;
-    margin-top: 15px;
-}
-
-header nav a,
-header nav a:visited,
-header nav a:link {
-    color: #ffffff !important; /* Принудительно белый */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
-}
-
-header nav a:hover,
-header nav a:active,
-header nav a:focus {
-    color: #ffffff !important; /* При клике тоже белый */
-    border-bottom: 2px solid #ffffff;
-}
-
-header nav a.active {
-    color: #ffffff !important;
-    border-bottom: 2px solid #ffffff;
-    font-weight: 800;
-}
 }
