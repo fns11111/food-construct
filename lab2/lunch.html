@@ -7,9 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Подключаем основные стили (там шапка, футер и адаптив) -->
     <link rel="stylesheet" href="../lab1/style.css"> 
-    <!-- Подключаем стили для этой страницы (сетка, карточки, форма) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,126 +21,29 @@
         </nav>
     </header>
 
-    <main class="menu-main">
-        <!-- Секция Супы -->
-        <section class="menu-section">
-            <h2>Супы</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400&auto=format&fit=crop" alt="Том Ям">
-                    <p class="dish-price">450 ₽</p>
-                    <p class="dish-name">Том Ям с креветками</p>
-                    <p class="dish-weight">350 г</p>
-                    <button type="button">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?q=80&w=400&auto=format&fit=crop" alt="Борщ">
-                    <p class="dish-price">280 ₽</p>
-                    <p class="dish-name">Классический борщ с говядиной</p>
-                    <p class="dish-weight">300 г</p>
-                    <button type="button">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?q=80&w=400&auto=format&fit=crop" alt="Крем-суп">
-                    <p class="dish-price">320 ₽</p>
-                    <p class="dish-name">Крем-суп из белых грибов</p>
-                    <p class="dish-weight">250 г</p>
-                    <button type="button">Добавить</button>
-                </div>
-            </div>
-        </section>
+    <!-- Блок, куда JS будет вставлять карточки -->
+    <main class="menu-main"></main>
 
-        <!-- Секция Главные блюда -->
-        <section class="menu-section">
-            <h2>Главные блюда</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1626844131082-256783844137?q=80&w=400&auto=format&fit=crop" alt="Паста">
-                    <p class="dish-price">390 ₽</p>
-                    <p class="dish-name">Паста карбонара</p>
-                    <p class="dish-weight">280 г</p>
-                    <button type="button">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=400&auto=format&fit=crop" alt="Курица">
-                    <p class="dish-price">420 ₽</p>
-                    <p class="dish-name">Куриное филе с овощами гриль и соусом песто</p>
-                    <p class="dish-weight">310 г</p>
-                    <button type="button">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=400&auto=format&fit=crop" alt="Плов">
-                    <p class="dish-price">350 ₽</p>
-                    <p class="dish-name">Плов с бараниной</p>
-                    <p class="dish-weight">350 г</p>
-                    <button type="button">Добавить</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Секция Напитки -->
-        <section class="menu-section">
-            <h2>Напитки</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=400&auto=format&fit=crop" alt="Чай">
-                    <p class="dish-price">150 ₽</p>
-                    <p class="dish-name">Чай черный с чабрецом</p>
-                    <p class="dish-weight">400 мл</p>
-                    <button type="button">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=400&auto=format&fit=crop" alt="Лимонад">
-                    <p class="dish-price">200 ₽</p>
-                    <p class="dish-name">Домашний лимонад</p>
-                    <p class="dish-weight">500 мл</p>
-                    <button type="button">Добавить</button>
-                </div>
-                <div class="dish-card">
-                    <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?q=80&w=400&auto=format&fit=crop" alt="Кофе">
-                    <p class="dish-price">180 ₽</p>
-                    <p class="dish-name">Капучино</p>
-                    <p class="dish-weight">300 мл</p>
-                    <button type="button">Добавить</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Форма заказа (ЛР3) -->
+    <!-- Форма заказа -->
     <section class="order-section">
         <h2>Оформить заказ</h2>
         <form action="https://httpbin.org/post" method="POST" class="order-form">
+            
             <div class="form-block">
                 <h3>Ваш заказ</h3>
-                <div class="form-group">
-                    <label for="soup">Суп:</label>
-                    <select id="soup" name="soup" required>
-                        <option value="">Выберите суп</option>
-                        <option value="tom_yam">Том Ям с креветками</option>
-                        <option value="borsch">Классический борщ</option>
-                        <option value="mushroom_soup">Крем-суп из белых грибов</option>
-                    </select>
+                <div id="cart-items">
+                    <p class="cart-empty">Ничего не выбрано</p>
                 </div>
-                <div class="form-group">
-                    <label for="main_dish">Главное блюдо:</label>
-                    <select id="main_dish" name="main_dish" required>
-                        <option value="">Выберите главное блюдо</option>
-                        <option value="carbonara">Паста карбонара</option>
-                        <option value="chicken">Куриное филе с овощами</option>
-                        <option value="plov">Плов с бараниной</option>
-                    </select>
+                <div id="cart-total" style="display: none;">
+                    <p><strong>Стоимость заказа: <span id="total-price">0 ₽</span></strong></p>
                 </div>
-                <div class="form-group">
-                    <label for="drink">Напиток:</label>
-                    <select id="drink" name="drink" required>
-                        <option value="">Выберите напиток</option>
-                        <option value="tea">Чай черный с чабрецом</option>
-                        <option value="lemonade">Домашний лимонад</option>
-                        <option value="cappuccino">Капучино</option>
-                    </select>
-                </div>
-                <div class="form-group">
+                
+                <!-- Скрытые поля для отправки данных на сервер -->
+                <input type="hidden" name="soup" id="input-soup">
+                <input type="hidden" name="main" id="input-main">
+                <input type="hidden" name="drink" id="input-drink">
+                
+                <div class="form-group" style="margin-top: 20px;">
                     <label for="comment">Комментарий:</label>
                     <textarea id="comment" name="comment" rows="3"></textarea>
                 </div>
@@ -188,7 +89,7 @@
             </div>
 
             <div class="form-actions">
-                <button type="reset" class="btn-reset">Сбросить</button>
+                <button type="reset" class="btn-reset" onclick="resetCart()">Сбросить</button>
                 <button type="submit" class="btn-submit">Отправить</button>
             </div>
         </form>
@@ -200,5 +101,22 @@
         <p>Адрес: г. Москва, ул. Пушкина, д. 10</p>
     </footer>
 
+    <!-- Подключение скриптов -->
+    <script src="dishes.js"></script>
+    <script src="render.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderDishes();
+            updateCartUI();
+        });
+        
+        // Функция для сброса корзины при нажатии кнопки "Сбросить" в форме
+        function resetCart() {
+            cart = { soup: null, main: null, drink: null };
+            document.querySelectorAll('.dish-card').forEach(c => c.classList.remove('selected'));
+            updateCartUI();
+        }
+    </script>
 </body>
 </html>
