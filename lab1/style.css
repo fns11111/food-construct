@@ -218,3 +218,22 @@ footer a:hover {
         font-size: 12px;
     }
 }
+/* ===== САМЫЙ ГЛАВНЫЙ ФИКС ===== */
+header nav a, 
+header nav a:link, 
+header nav a:visited, 
+header nav a:hover, 
+header nav a:active, 
+header nav a:focus,
+header nav a.active {
+    color: #ffffff !important; /* ВСЕГДА БЕЛЫЙ */
+    text-decoration: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+}
+
+/* Чтобы выделить активную страницу - делаем подчеркивание */
+header nav a.active {
+    border-bottom: 2px solid #ffffff !important;
+    font-weight: 800 !important;
+}
