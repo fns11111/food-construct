@@ -1,16 +1,3 @@
-/* --- Фикс для меню на странице "Собрать ланч" --- */
-header nav {
-    display: flex;
-    flex-direction: row; /* Возвращаем горизонтальное положение */
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: flex-start; /* Выравнивание по левому краю */
-}
-
-/* Убираем лишние отступы, если они были */
-header nav a {
-    margin-right: 0;
-}
 /* ===== Сетка для блюд ===== */
 .menu-main {
     max-width: 1200px;
@@ -20,9 +7,10 @@ header nav a {
 .menu-section h2 {
     text-align: center;
     margin: 30px 0 20px;
+    color: tomato;
 }
 
-/* Сетка Grid для блюд (3 колонки по 1fr) */
+/* Сетка Grid для блюд (3 колонки) */
 .dishes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -30,7 +18,7 @@ header nav a {
     padding: 20px;
 }
 
-/* Карточка блюда (Flexbox) */
+/* Карточка блюда */
 .dish-card {
     display: flex;
     flex-direction: column;
@@ -41,15 +29,13 @@ header nav a {
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
     transition: border 0.2s ease, background-color 0.2s ease;
     border: 2px solid transparent;
-    height: 100%; /* Карточки будут одинаковой высоты */
+    height: 100%;
 }
 
-/* Наведение на карточку */
 .dish-card:hover {
     border: 2px solid tomato;
 }
 
-/* Кнопка внутри карточки */
 .dish-card button {
     background-color: #f1eee9;
     padding: 10px 30px;
@@ -64,7 +50,7 @@ header nav a {
     width: 100%;
 }
 
-/* Меняем цвет кнопки при наведении на карточку (контекстный селектор) */
+/* Меняем цвет кнопки при наведении на карточку */
 .dish-card:hover button {
     background-color: tomato;
     color: white;
@@ -74,9 +60,10 @@ header nav a {
     width: 100%;
     border-radius: 35px;
     margin-bottom: 15px;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Тексты внутри карточки */
 .dish-price {
     font-size: 24px;
     font-weight: 700;
@@ -87,31 +74,24 @@ header nav a {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
-    flex-grow: 1; /* Растягивает текст, чтобы прижать низ */
+    flex-grow: 1; /* Растягивает текст */
 }
 
 .dish-weight {
-    color: #888888; /* Серый цвет */
+    color: #888888;
     font-size: 14px;
     margin-bottom: 15px;
 }
 
-/* ===== Адаптивность для страницы "Собрать ланч" ===== */
-
-@media (max-width: 800px) {
-    .dishes-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* ===== Фикс для навигации (чтобы ссылки не наезжали) ===== */
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
 }
 
-@media (max-width: 600px) {
-    .dishes-grid {
-        grid-template-columns: 1fr;
-    }
-    .menu-section h2 {
-        text-align: center;
-    }
-}
 /* ===== Стили для формы заказа ===== */
 .order-section {
     max-width: 1000px;
@@ -122,6 +102,7 @@ header nav a {
 .order-section h2 {
     text-align: center;
     margin-bottom: 30px;
+    color: tomato;
 }
 
 .order-form {
@@ -134,9 +115,8 @@ header nav a {
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
 }
 
-/* Разделение формы на две колонки */
 .form-block {
-    flex: 1 1 400px; /* Растягиваться, но не меньше 400px */
+    flex: 1 1 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -160,7 +140,6 @@ header nav a {
     color: #444;
 }
 
-/* Поля ввода и селекты */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="tel"],
@@ -184,7 +163,6 @@ header nav a {
     border-color: tomato;
 }
 
-/* Чекбоксы и радио */
 .checkbox-group, .radio-group {
     flex-direction: row;
     align-items: center;
@@ -196,7 +174,6 @@ header nav a {
     cursor: pointer;
 }
 
-/* Fieldset */
 fieldset.form-group {
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -210,7 +187,6 @@ fieldset.form-group legend {
     padding: 0 5px;
 }
 
-/* Кнопки */
 .form-actions {
     display: flex;
     justify-content: flex-end;
@@ -250,12 +226,14 @@ fieldset.form-group legend {
     background-color: #e55a45;
 }
 
-/* Адаптив для формы */
+/* ===== Адаптивность ===== */
 @media (max-width: 800px) {
-    .order-form {
-        padding: 20px;
-    }
-    .form-block {
-        flex: 1 1 100%;
-    }
+    .dishes-grid { grid-template-columns: repeat(2, 1fr); }
+    .order-form { padding: 20px; }
+    .form-block { flex: 1 1 100%; }
+}
+
+@media (max-width: 600px) {
+    .dishes-grid { grid-template-columns: 1fr; }
+    .order-section h2 { text-align: center; }
 }
