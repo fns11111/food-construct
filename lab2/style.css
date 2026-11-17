@@ -314,3 +314,126 @@ header nav a.active {
     color: white;
     border-color: tomato;
 }
+/* ===== Блок с комбо-ланчами ===== */
+.combos-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.combos-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: tomato;
+}
+
+.combos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.combo-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    justify-content: center;
+}
+
+.combo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 45%; /* Чтобы влезало по 2 в ряд */
+}
+
+.combo-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Анимация */
+}
+
+.combo-item img:hover {
+    transform: translateY(-10px) scale(1.05); /* Поднимаем и увеличиваем */
+}
+
+.combo-item p {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dessert-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px; /* Шрифт меньше подписи на 2px */
+    color: #888;
+}
+
+/* ===== Уведомления ===== */
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.notification-box {
+    background: #fff;
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+.notification-box p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.notif-ok {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.notif-ok:hover {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Адаптив для комбо */
+@media (max-width: 800px) {
+    .combos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .combos-grid { grid-template-columns: 1fr; }
+    .combo-item { width: 100%; }
+}
