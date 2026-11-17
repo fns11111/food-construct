@@ -21,10 +21,8 @@
         </nav>
     </header>
 
-    <!-- Блок, куда JS будет вставлять карточки -->
     <main class="menu-main"></main>
 
-    <!-- Форма заказа -->
     <section class="order-section">
         <h2>Оформить заказ</h2>
         <form action="https://httpbin.org/post" method="POST" class="order-form">
@@ -38,10 +36,11 @@
                     <p><strong>Стоимость заказа: <span id="total-price">0 ₽</span></strong></p>
                 </div>
                 
-                <!-- Скрытые поля для отправки данных на сервер -->
                 <input type="hidden" name="soup" id="input-soup">
                 <input type="hidden" name="main" id="input-main">
                 <input type="hidden" name="drink" id="input-drink">
+                <input type="hidden" name="salad" id="input-salad">
+                <input type="hidden" name="dessert" id="input-dessert">
                 
                 <div class="form-group" style="margin-top: 20px;">
                     <label for="comment">Комментарий:</label>
@@ -101,7 +100,6 @@
         <p>Адрес: г. Москва, ул. Пушкина, д. 10</p>
     </footer>
 
-    <!-- Подключение скриптов -->
     <script src="dishes.js"></script>
     <script src="render.js"></script>
     <script src="cart.js"></script>
@@ -111,9 +109,8 @@
             updateCartUI();
         });
         
-        // Функция для сброса корзины при нажатии кнопки "Сбросить" в форме
         function resetCart() {
-            cart = { soup: null, main: null, drink: null };
+            cart = { soup: null, main: null, drink: null, salad: null, dessert: null };
             document.querySelectorAll('.dish-card').forEach(c => c.classList.remove('selected'));
             updateCartUI();
         }
