@@ -11,24 +11,25 @@ header nav {
 
 /* Обычные ссылки в меню */
 header nav a {
-    color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый */
+    color: rgba(255, 255, 255, 0.7) !important; /* !important перебивает старые стили */
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     margin: 0;
-    padding: 5px 10px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent; /* Место под полоску, чтобы текст не прыгал */
     transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
 /* При наведении мышки (hover) */
 header nav a:hover {
-    color: #ffffff; /* Становится чисто белым */
+    color: #ffffff !important;
 }
 
 /* АКТИВНАЯ ссылка (текущая страница) */
 header nav a.active {
-    color: #ffffff; /* Белый цвет */
-    border-bottom: 3px solid #ffffff; /* Белая полоска снизу */
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff;
 }
 /* ===== Сетка для блюд ===== */
 .menu-main {
