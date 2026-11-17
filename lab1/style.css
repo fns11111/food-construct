@@ -1,0 +1,154 @@
+/* Универсальный селектор */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие стили для текста */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ===== Шапка ===== */
+header {
+    background-color: #ff6b35;
+    color: #ffffff;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* ===== Навигация ===== */
+nav {
+    padding: 10px 0;
+}
+
+nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #222222;
+}
+
+/* ===== Основное содержимое ===== */
+main {
+    padding: 20px 40px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff6b35;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+/* ===== Изображение ===== */
+.about-image {
+    width: 100%;
+    max-width: 600px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: block;
+}
+
+/* ===== Список преимуществ ===== */
+.advantages ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.advantages li {
+    font-size: 16px;
+    color: #333333;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #fff3ed;
+    border-left: 4px solid #ff6b35;
+    border-radius: 4px;
+}
+
+/* ===== Таблица ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    font-size: 15px;
+}
+
+th {
+    background-color: #ff6b35;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff8f5;
+}
+
+tbody tr:hover {
+    background-color: #ffe6d9;
+}
+
+/* ===== Футер ===== */
+footer {
+    background-color: black;
+    color: white;
+    padding: 25px 40px;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 8px;
+}
+
+footer a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #ff6b35;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
