@@ -226,7 +226,7 @@ v {
     align-items: center;
     padding: 10px 0;
 }
-/* ===== Жесткая настройка навигации ===== */
+/* ===== Финальная навигация ===== */
 header nav {
     display: flex;
     flex-direction: row;
@@ -235,29 +235,30 @@ header nav {
     align-items: center;
     padding: 10px 0;
     margin-top: 15px;
-}    
-/* Обычные ссылки в меню */
-header nav a {
-    color: #ffffff; 
+}
+
+header nav a,
+header nav a:visited,
+header nav a:link {
+    color: #ffffff !important; /* Принудительно белый */
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    padding-bottom: 5px; /* Отступ для текста */
-    border-bottom: 2px solid transparent; /* Место под линию */
-    transition: all 0.2s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
 }
 
-/* При наведении мышки (hover) */
-header nav a:hover {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff; /* При наведении появляется белая линия */
+header nav a:hover,
+header nav a:active,
+header nav a:focus {
+    color: #ffffff !important; /* При клике тоже белый */
+    border-bottom: 2px solid #ffffff;
 }
 
-
-/* АКТИВНАЯ ссылка (текущая страница) */
 header nav a.active {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff; /* Постоянная белая линия */
-    font-weight: 800; /* Сделаем шрифт чуть жирнее для выделения */
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff;
+    font-weight: 800;
 }
 }
