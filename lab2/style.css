@@ -251,12 +251,12 @@ fieldset.form-group legend {
 }
 
 .btn-submit {
-    background-color: tomato;
+    background-color: black;
     color: white;
 }
 
 .btn-submit:hover {
-    background-color: #e55a45;
+    background-color: #333;
 }
 
 /* ===== Адаптивность ===== */
