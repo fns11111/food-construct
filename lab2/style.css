@@ -1,0 +1,99 @@
+/* ===== Сетка для блюд ===== */
+.menu-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-section h2 {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+/* Сетка Grid для блюд (3 колонки по 1fr) */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Карточка блюда (Flexbox) */
+.dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: #ffffff;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    transition: border 0.2s ease, background-color 0.2s ease;
+    border: 2px solid transparent; /* Резервируем место под границу, чтобы карточка не прыгала */
+}
+
+/* Наведение на карточку */
+.dish-card:hover {
+    border: 2px solid tomato;
+}
+
+/* Кнопка внутри карточки */
+.dish-card button {
+    background-color: #f1eee9;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: auto; /* Прижимает кнопку к низу, чтобы выровнять по одной линии */
+    transition: background-color 0.2s ease;
+}
+
+/* Меняем цвет кнопки при наведении на карточку (контекстный селектор) */
+.dish-card:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+.dish-card img {
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 15px;
+}
+
+/* Тексты внутри карточки */
+.dish-price {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0 5px;
+}
+
+.dish-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Растягивает блок с названием, чтобы вес и кнопка были внизу */
+}
+
+.dish-weight {
+    color: #888888; /* Серый цвет */
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* ===== Адаптивность для страницы "Собрать ланч" ===== */
+
+@media (max-width: 800px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+    .menu-section h2 {
+        text-align: center;
+    }
+}
