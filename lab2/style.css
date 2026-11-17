@@ -97,3 +97,150 @@
         text-align: center;
     }
 }
+/* ===== Стили для формы заказа ===== */
+.order-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.order-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+}
+
+/* Разделение формы на две колонки */
+.form-block {
+    flex: 1 1 400px; /* Растягиваться, но не меньше 400px */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-block h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Поля ввода и селекты */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: tomato;
+}
+
+/* Чекбоксы и радио */
+.checkbox-group, .radio-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group label, .radio-group label {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Fieldset */
+fieldset.form-group {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+fieldset.form-group legend {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+    padding: 0 5px;
+}
+
+/* Кнопки */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.form-actions button {
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-reset {
+    background-color: #f1eee9;
+    color: #333;
+}
+
+.btn-reset:hover {
+    background-color: #e0ddd8;
+}
+
+.btn-submit {
+    background-color: tomato;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #e55a45;
+}
+
+/* Адаптив для формы */
+@media (max-width: 800px) {
+    .order-form {
+        padding: 20px;
+    }
+    .form-block {
+        flex: 1 1 100%;
+    }
+}
