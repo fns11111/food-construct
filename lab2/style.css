@@ -11,13 +11,13 @@ header nav {
 
 /* Обычные ссылки в меню */
 header nav a {
-    color: rgba(255, 255, 255, 0.7) !important; /* !important перебивает старые стили */
+    color: rgba(255, 255, 255, 0.7) !important;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     margin: 0;
     padding: 5px 0;
-    border-bottom: 2px solid transparent; /* Место под полоску, чтобы текст не прыгал */
+    border-bottom: 2px solid transparent; /* Резервируем место под полоску */
     transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
@@ -25,11 +25,10 @@ header nav a {
 header nav a:hover {
     color: #ffffff !important;
 }
-
 /* АКТИВНАЯ ссылка (текущая страница) */
 header nav a.active {
     color: #ffffff !important;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff; /* Белая полоска */
 }
 /* ===== Сетка для блюд ===== */
 .menu-main {
