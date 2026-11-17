@@ -40,7 +40,8 @@ header nav a {
     background-color: #ffffff;
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
     transition: border 0.2s ease, background-color 0.2s ease;
-    border: 2px solid transparent; /* Резервируем место под границу, чтобы карточка не прыгала */
+    border: 2px solid transparent;
+    height: 100%; /* Карточки будут одинаковой высоты */
 }
 
 /* Наведение на карточку */
@@ -58,8 +59,9 @@ header nav a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    margin-top: auto; /* Прижимает кнопку к низу, чтобы выровнять по одной линии */
+    margin-top: auto; /* Прижимает кнопку к низу */
     transition: background-color 0.2s ease;
+    width: 100%;
 }
 
 /* Меняем цвет кнопки при наведении на карточку (контекстный селектор) */
@@ -85,7 +87,7 @@ header nav a {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
-    flex-grow: 1; /* Растягивает блок с названием, чтобы вес и кнопка были внизу */
+    flex-grow: 1; /* Растягивает текст, чтобы прижать низ */
 }
 
 .dish-weight {
