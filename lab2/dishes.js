@@ -5,7 +5,7 @@ const dishes = [
     { keyword: "tom_yam", name: "Том Ям с креветками", price: 450, category: "soup", kind: "fish", count: "350 г", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400&auto=format&fit=crop" },
     { keyword: "gaspacho", name: "Гаспачо", price: 250, category: "soup", kind: "veg", count: "300 г", image: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=400&auto=format&fit=crop" },
     { keyword: "ukha", name: "Уха по-фински", price: 350, category: "soup", kind: "fish", count: "350 г", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400&auto=format&fit=crop" },
-    { keyword: "solyanka", name: "Солянка мясная", price: 380, category: "soup", kind: "meat", count: "350 г", image: "https://images.unsplash.com/photo-1548943487-a2e4d43b4850?q=80&w=400&auto=format&fit=crop" },
+    { keyword: "solyanka", name: "Солянка мясная", price: 380, category: "soup", kind: "meat", count: "350 г", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400&auto=format&fit=crop" },
 
     // ===== ГЛАВНЫЕ БЛЮДА (6) =====
     { keyword: "carbonara", name: "Паста карбонара", price: 390, category: "main", kind: "meat", count: "280 г", image: "https://images.unsplash.com/photo-1626844131082-256783844137?q=80&w=400&auto=format&fit=crop" },
