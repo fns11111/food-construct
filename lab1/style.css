@@ -40,6 +40,7 @@ header nav {
     align-items: center;
     padding: 10px 0;
     margin-top: 15px;
+    justify-content: flex-start; /* ВОТ ЭТА СТРОКА */
 }
 
 /* Все ссылки в меню */
