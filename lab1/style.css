@@ -185,7 +185,7 @@ footer a:hover {
         width: 500px;
     }
     header nav {
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 }
 
